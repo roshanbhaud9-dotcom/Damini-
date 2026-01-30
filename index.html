@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Damini 💖</title>
+
+<style>
+body{
+margin:0;
+font-family: Arial;
+text-align:center;
+color:white;
+background: linear-gradient(45deg,#ff9a9e,#fad0c4);
+overflow-x:hidden;
+}
+
+.page{
+display:none;
+padding:20px;
+}
+
+img{
+width:200px;
+height:200px;
+object-fit:cover;
+border-radius:15px;
+margin:10px;
+}
+
+.caption{
+font-size:14px;
+margin-top:-5px;
+}
+
+button{
+padding:12px 20px;
+font-size:16px;
+border:none;
+border-radius:10px;
+background:#ff4b5c;
+color:white;
+cursor:pointer;
+}
+
+/* Hearts Animation */
+.heart{
+position:fixed;
+bottom:-10px;
+font-size:20px;
+animation: float 6s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+100%{transform:translateY(-100vh);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div id="p1" class="page">
+<h1>Happy Birthday Damini 💖</h1>
+<p>
+Damini, today is all about you.  
+Your smile and heart make life brighter.  
+May your day be as beautiful as you ✨
+</p>
+
+<div>
+<img src="photo1.jpg"><p class="caption">Your smile lights up everything 💕</p>
+<img src="photo2.jpg"><p class="caption">Pure happiness in one frame ✨</p>
+</div>
+
+<button onclick="next(2)">Next 💖</button>
+</div>
+
+<!-- PAGE 2 -->
+<div id="p2" class="page">
+<h1>Graceful You 🌸</h1>
+<p>
+You carry elegance so effortlessly.  
+Traditional or modern, you shine 💫
+</p>
+
+<div>
+<img src="sari1.jpg"><p class="caption">Elegance in every step 🌷</p>
+<img src="sari2.jpg"><p class="caption">Grace looks perfect on you 💕</p>
+<img src="sari3.jpg"><p class="caption">A true queen in sari 👑</p>
+</div>
+
+<button onclick="next(3)">Next 💖</button>
+</div>
+
+<!-- PAGE 3 -->
+<div id="p3" class="page">
+<h1>Your Eyes 👀</h1>
+<p>
+Your eyes hold magic and softness.  
+They speak beauty without words ✨
+</p>
+
+<img src="eye.jpg">
+<p class="caption">Eyes that can steal hearts 💕</p>
+
+<button onclick="next(4)">Next 💖</button>
+</div>
+
+<!-- PAGE 4 -->
+<div id="p4" class="page">
+<h1>Your Cute Side 🌷</h1>
+<p>
+Your casual look is my favorite.  
+You look beautiful without trying 💖
+</p>
+
+<div>
+<img src="casual1.jpg"><p class="caption">Cute without effort ✨</p>
+<img src="casual2.jpg"><p class="caption">Your smile = happiness 💕</p>
+<img src="casual3.jpg"><p class="caption">Simply adorable 🌸</p>
+<img src="casual4.jpg"><p class="caption">Beauty in simplicity 💫</p>
+</div>
+
+<button onclick="next(5)">Next 💖</button>
+</div>
+
+<!-- PAGE 5 -->
+<div id="p5" class="page">
+<h1>Special Wish 💌</h1>
+<p>
+Damini, never forget how special you are.  
+You deserve happiness and love always 💕
+</p>
+
+<img src="final.jpg">
+<p class="caption">My favorite smile 💖</p>
+
+<button onclick="next(6)">Next 💖</button>
+</div>
+
+<!-- PAGE 6 -->
+<div id="p6" class="page">
+<h1>Beautiful Memories ✨</h1>
+<p>
+Every photo of you carries warmth.  
+Keep shining always 💕
+</p>
+
+<div>
+<img src="end1.jpg"><p class="caption">Confidence suits you 💫</p>
+<img src="end2.jpg"><p class="caption">A perfect click 📸</p>
+<img src="end3.jpg"><p class="caption">You glow differently ✨</p>
+<img src="end4.jpg"><p class="caption">That smile though 💕</p>
+<img src="end5.jpg"><p class="caption">Unforgettable beauty 🌸</p>
+</div>
+
+<button onclick="next(7)">Final 💖</button>
+</div>
+
+<!-- FINAL PAGE -->
+<div id="p7" class="page">
+<h1>Damini 💖</h1>
+<h2>You are my favorite smile, my favorite thought, my everything 💕</h2>
+<h1>Happy Birthday 🎂✨</h1>
+</div>
+
+<script>
+let current=1;
+document.getElementById("p1").style.display="block";
+
+function next(n){
+document.getElementById("p"+current).style.display="none";
+document.getElementById("p"+n).style.display="block";
+current=n;
+}
+
+/* Floating Hearts */
+setInterval(()=>{
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="💖";
+heart.style.left=Math.random()*100+"%";
+heart.style.fontSize=(20+Math.random()*20)+"px";
+document.body.appendChild(heart);
+
+setTimeout(()=>heart.remove(),6000);
+},400);
+</script>
+
+</body>
+</html>
